@@ -1,4 +1,4 @@
-import {blue,neutral} from './Colors';
+import {blue,neutral,yellow,red,green} from './Colors';
 import {primaryFont} from './Typography';
 
 export const defaultTheme = {
@@ -10,5 +10,16 @@ export const defaultTheme = {
     textColor: neutral[600],
     disabled: neutral[400],
     textOnDisabled: neutral[300],
-    primaryFont
+    primaryFont,
+    status: {
+        warningColor: yellow[100],
+        warningColorHover: yellow[200],
+        warningColorActive: yellow[300],
+        errorColor: red[100],
+        errorColorHover: red[200],
+        errorColorActive: red[300],
+        successColor: green[100],
+        successColorHover: green[200],
+        successColorActive: green[300]
+      }
 }
