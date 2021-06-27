@@ -10,6 +10,8 @@ export const defaultTheme = {
     textColor: neutral[600],
     disabled: neutral[400],
     textOnDisabled: neutral[300],
+    formElementBackground: neutral[100],
+    textOnFormElementBackground: neutral[600],
     primaryFont,
     status: {
         warningColor: yellow[100],
@@ -38,6 +40,8 @@ export const darkTheme = {
     textOnDisabled: neutral[300],
     textFieldBackground: neutral[200],
     textFieldLabelColor: neutral[100],
+    formElementBackground: blue[100],
+    textOnFormElementBackground: neutral[100],
     status: {
       warningColor: yellow[100],
       warningColorHover: yellow[200],

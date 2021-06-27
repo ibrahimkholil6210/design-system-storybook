@@ -1,6 +1,6 @@
 import React,{useState} from "react";
 import styled,{ThemeProvider} from 'styled-components';
-import {PrimaryButton,SecondaryButton,TertiaryButton} from './components/Button';
+import {PrimaryButton,SecondaryButton,TertiaryButton,SignUpModal} from './components';
 import {defaultTheme,darkTheme} from './utills';
 
 const CenterElement = styled.div`
@@ -22,14 +22,20 @@ const GroupElement = styled.div`
 
 const App = () => {
   const [useDarkTheme,setDarkTheme] = useState(false);
+  const [showModal,setShowModal] = useState(false);
   return (
     <ThemeProvider theme={useDarkTheme ? darkTheme : defaultTheme}>
       <button onClick={() => setDarkTheme(true)}>Dark Theme</button>
       <button onClick={() => setDarkTheme(false)}>Default Theme</button>
+      <button onClick={() => setShowModal(!showModal)}>Default Theme</button>
       <CenterElement style={{
         backgroundColor: useDarkTheme ? defaultTheme.primaryColor : darkTheme.primaryColor,
       }}>
-        <GroupElement>
+        <SignUpModal
+          showModal={showModal}
+          setShowModal={setShowModal}
+        />
+        {/* <GroupElement>
           <PrimaryButton>Primary</PrimaryButton>
           <SecondaryButton>Secondary</SecondaryButton>
           <TertiaryButton>Tertiary</TertiaryButton>
@@ -45,7 +51,7 @@ const App = () => {
           <PrimaryButton modifiers={["large","error", "tertiaryButtonError"]}>Tertiary Error</PrimaryButton>
           <PrimaryButton modifiers={["large","success","primaryButtonSuccess"]}>Primary</PrimaryButton>
           <SecondaryButton modifiers={["large","warning","secondaryButtonWarning"]}>Secondary</SecondaryButton>
-        </GroupElement>
+        </GroupElement> */}
       </CenterElement>
     </ThemeProvider>
   );

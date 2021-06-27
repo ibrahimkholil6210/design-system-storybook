@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { applyStyleModifiers } from "styled-components-modifiers";
-import {defaultTheme,typeScale} from '../utills';
+import {typeScale} from '../utills';
 
 const BUTTON_MODIFIERS = {
     small: () => `
